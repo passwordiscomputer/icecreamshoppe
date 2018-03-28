@@ -7,12 +7,6 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class OrderFormComponent implements OnInit {
   @Output() clickedAdd = new EventEmitter();
-
-  addButtonClicked(flavor: string, : string) {
-      let newTask: Task = new Task(description, parseInt(priority));
-      this.clickedDone.emit(newOrder);
-    }
-
   currentFlavor = "vanilla";
 
   selectFlavor(flavor) {

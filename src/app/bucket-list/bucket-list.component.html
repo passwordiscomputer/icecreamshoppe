@@ -4,16 +4,15 @@
         <th>Bucket Flavor</th>
         <th>Remaining Scoops</th>
         <th>Price per Scoop</th>
+        <th># of Scoops</th>
       </tr>
       <tr [class]="currentBucket.flavor" *ngFor="let currentBucket of childBucketList">
         <td>{{currentBucket.flavor}}</td>
         <td>{{currentBucket.remainingScoops}}</td>
         <td>{{currentBucket.scoopPrice}}</td>
+        <td> <button type="button" class="btn btn-danger"> - </button>
+         <button type="button" class="btn btn-success"> + </button> </td>
+
       </tr>
-      <!-- <tr>
-        <td>{{}}</td>
-        <td>{{}}</td>
-        <td>{{}}</td>
-      </tr> -->
   </table>
 </div>
