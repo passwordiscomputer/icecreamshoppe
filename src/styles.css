@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.strawberry{
+  background-color: pink;
+}
+
+.vanilla{
+  background-color: beige;
+}
+
+.chocolate{
+  background-color: #6b3e26;
+  color: white;
+}

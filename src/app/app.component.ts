@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Bucket } from './models/bucket.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  masterBucketList: Bucket[] = [
+    new Bucket('chocolate', 2.49),
+    new Bucket('strawberry', 1.99),
+    new Bucket('vanilla', 2.49)
+  ];
+
 }
