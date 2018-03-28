@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BucketListComponent } from './bucket-list/bucket-list.component';
 import { OrderFormComponent } from './order-form/order-form.component';
@@ -16,7 +15,8 @@ import { OrderTotalComponent } from './order-total/order-total.component';
     OrderTotalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

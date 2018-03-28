@@ -1,3 +1,14 @@
-<p>
-  order-form works!
-</p>
+<div class="{{currentFlavor}} card" id="order-form">
+  <label for="bucket-flavor">Select an Flavor:</label>
+  <select (change)="selectFlavor($event.target.value)" id="bucket-flavor" name="bucket-flavor" class="form-control">
+    <option name="flavor" value="vanilla">Vanilla</option>
+    <option name="flavor" value="strawberry">Strawberry</option>
+    <option name="flavor" value="chocolate">Chocolate</option>
+  </select>
+  <h1>{{currentFlavor}}</h1>
+  <br>
+  <label for="scoop-amount">How many scoops would you like?</label>
+  <input type="number" name="scoop-amount" class="form-control">
+  <br>
+  <button type="button" class="btn btn-success">Add to Cone</button>
+</div>

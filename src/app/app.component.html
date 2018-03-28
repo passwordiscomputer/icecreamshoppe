@@ -1,13 +1,24 @@
 <h1 class="display-1">Daddy's Ice Cream Shoppe</h1>
-
+<div class="row">
+  <div class="col-md-6">
+    <app-bucket-list [childBucketList] = "masterBucketList"></app-bucket-list>
+  </div>
 <!-- displays remaining ice cream -->
-<app-bucket-list [childBucketList] = "masterBucketList"></app-bucket-list>
 
 <hr>
+
+  <div class="col-md-6">
 <!-- displays ice cream order form -->
-<app-order-form></app-order-form>
-
+  <app-order-total></app-order-total>
+  </div>
+</div>
 <hr>
+
+<div class="row">
 
 <!-- displays order total -->
-<app-order-total></app-order-total>
+<div class="col-md-12">
+  <app-order-form></app-order-form>
+</div>
+
+</div>
