@@ -1,13 +1,24 @@
-td {
-  font-size: 18px;
+#bucket-table {
+  position: relative;
+  display: block;
+  margin: auto 20% auto 20%;
+}
+
+
+#minus-butt, #add-butt {
+  background-color: transparent;
+}
+
+#bucket-flavor, #remaining-scoops, #scoop-cost, #scoop-quantity {
+  width: 25%;
+}
+
+#plusMinus {
+  margin: 0 auto;
 }
 
 .addSub {
   height: 42px;
   width: 42px;
-  margin: auto -15px;
-}
-
-#minus-butt, #add-butt {
-  background-color: transparent;
+  margin: auto;
 }

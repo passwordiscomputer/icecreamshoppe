@@ -7,15 +7,14 @@
         <th>Price</th>
       </tr>
       <tr [ngStyle]="{'background-color': currentBucket.color, 'color': currentBucket.fontColor}"  *ngFor="let currentBucket of childBucketList | inOrder ">
-        <td>{{currentBucket.flavor}}</td>
-        <td>{{currentBucket.currentScoops}}</td>
-        <td>{{currentBucket.scoopPrice}}</td>
-        <td>{{currentBucket.totalPrice()}}</td>
+        <td>&nbsp;{{currentBucket.flavor}}</td>
+        <td>&nbsp;{{currentBucket.currentScoops}}</td>
+        <td>${{currentBucket.scoopPrice}}</td>
+        <td>${{currentBucket.totalPrice()}}</td>
       </tr>
-      <tr>
-        <td>Total: </td>
-        <td>{{sumTotal(currentBucket)}}</td>
-      </tr>
-  </table>
+    </table>
+    <h5 id="total">Total: {{sumTotal(currentBucket)}}</h5>
+
+
   <button (click)="clickedSell()"  type="button" class="btn btn-success"> Confirm Transaction </button>
 </div>

@@ -1,22 +1,26 @@
-<div class="card bucket-table">
-  <table >
-      <tr>
-        <th>Bucket Flavor</th>
-        <th>Remaining Scoops</th>
-        <th>Price per Scoop</th>
-        <th># of Scoops</th>
-      </tr>
-      <tr [class]="currentBucket.flavor" *ngFor="let currentBucket of childBucketList">
-        <td>&nbsp;{{currentBucket.flavor}}</td>
-        <td>&nbsp;{{currentBucket.remainingScoops}}</td>
-        <td>{{currentBucket.scoopPrice}}</td>
-        <td>
-          <div id="plusMinus">
-            <button (click)="currentBucket.subtractScoop()" type="button" class="btn" id="minus-butt"><img src="./assets/choc-minus.png" alt="subtract" class="addSub"></button>
-            <button (click)="currentBucket.addScoop(1)"  type="button" class="btn" id="add-butt"> <img src="./assets/icecream_plus.png" class="addSub" alt="add"> </button>
-          </div>
-        </td>
+<div id= "bucket-table">
+  <table>
+    <tr>
+      <th id="bucket-flavor">Flavor</th>
+      <th id="remaining-scoops">Scoops Left</th>
+      <th id="scoop-cost">$/Scoop</th>
+      <th id="scoop-quantity"> # of Scoops</th>
+    </tr>
+    <tr [class]="currentBucket.flavor" *ngFor="let currentBucket of childBucketList">
+      <td id="bucket-flavor">&nbsp;{{currentBucket.flavor}}</td>
+      <td id="remaining-scoops">&nbsp;{{currentBucket.remainingScoops}} / 96</td>
+      <td id="scoop-price">${{currentBucket.scoopPrice}}</td>
+      <td id="scoop-quantity">
+        <div id="plusMinus">
+          <button (click)="currentBucket.subtractScoop()" type="button" class="btn" id="minus-butt">
+            <img src="./assets/choc-minus.png" alt="subtract" class="addSub">
+          </button>
+          <button (click)="currentBucket.addScoop(1)" type="button" class="btn" id="add-butt">
+            <img src="./assets/icecream_plus.png" class="addSub" alt="add">
+          </button>
+        </div>
+      </td>
 
-      </tr>
+    </tr>
   </table>
 </div>
