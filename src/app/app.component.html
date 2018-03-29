@@ -1,15 +1,24 @@
-<h1 class="display-3">Daddy's Ice Cream Shoppe</h1>
-
-<hr><br>
-
+<h1 class="display-1">Daddy's Ice Cream Shoppe</h1>
+<br><br>
 <div class="row">
-  <div class="col-md-12">
-    <app-bucket-list [childBucketList]="masterBucketList"></app-bucket-list>
+  <div class="col-md-6">
+    <app-bucket-list [childBucketList] = "masterBucketList"></app-bucket-list>
+  </div>
+<!-- displays remaining ice cream -->
+
+<hr>
+
+  <div class="col-md-6">
+<!-- displays ice cream order form -->
+  <app-order-total (clickSender)="sellScoops()" [childBucketList] = "masterBucketList"></app-order-total>
   </div>
 </div>
+<hr>
 
-<br><hr><br>
+<div class="row">
 
-<app-order-total [childBucketList]="masterBucketList"></app-order-total>
+<!-- displays order total -->
+<div class="col-md-12">
+</div>
 
-<br><hr>
+</div>

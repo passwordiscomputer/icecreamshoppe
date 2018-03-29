@@ -1,4 +1,4 @@
-import { Component, Input, Output,  OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter,  OnInit } from '@angular/core';
 import { Bucket } from '../models/bucket.model';
 import { NgStyle } from '@angular/common';
 
@@ -9,9 +9,22 @@ import { NgStyle } from '@angular/common';
 })
 export class OrderTotalComponent implements OnInit {
   @Input() childBucketList: Bucket[];
+  @Output() clickSender = new EventEmitter();
   constructor() { }
   color = '#555555';
   ngOnInit() {
+  }
+
+  clickedSell(){
+    this.clickSender.emit();
+  }
+
+  getTotal(){
+    let total = 0;
+    for(let bucket of this.childBucketList){
+      total += bucket.currentScoops * bucket.scoopPrice;
+    }
+    return(Math.round(total*100)/100);
   }
 
 }
