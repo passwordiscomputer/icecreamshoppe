@@ -6,6 +6,7 @@ import { BucketListComponent } from './bucket-list/bucket-list.component';
 import { OrderTotalComponent } from './order-total/order-total.component';
 import { inOrderPipe } from './inOrder.pipe';
 import { AddFlavorComponent } from './add-flavor/add-flavor.component';
+import { VisualIcecreamComponent } from './visual-icecream/visual-icecream.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AddFlavorComponent } from './add-flavor/add-flavor.component';
     BucketListComponent,
     OrderTotalComponent,
     inOrderPipe,
-    AddFlavorComponent
+    AddFlavorComponent,
+    VisualIcecreamComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,20 @@
 <button *ngIf="!addFlavor"(click)="clickedAdd()" type="button" class="btn btn-warning">Add Flavor</button>
 <div [ngStyle]="{'background-color': newColor, 'color': newFontColor}" *ngIf="addFlavor">
-  <h3>Add new Flavor here!</h3>
-  <label>Enter Flavor Name:</label>
-  <input #newName>
+  <h3>New Flavor:</h3>
+  <label>Flavor Name:</label>
+  <input #newName class="form-control" placeholder="Enter Flavor Name">
   <br>
   <label>Enter Flavor Price:</label>
-  <input #newPrice>
+  <input #newPrice class="form-control" placeholder="Enter Flavor Price">
   <br>
-  <label>Enter Flavor Color:</label>
-  <input [(ngModel)] = "newColor" >
+  <label>Set Font Color:</label>
+  <input [(ngModel)] = "newFontColor" class="form-control" placeholder="Enter Flavor Color">
   <br>
-  <label>Enter Flavor Color:</label>
-  <input [(ngModel)] = "newFontColor" >
-  <button (click)="addButtonClicked(newName.value, newPrice.value, newColor, newFontColor)" type="button" name="button">Add Flavor</button>
+  <label>Set Background Color:</label>
+  <input [(ngModel)] = "newColor" class="form-control" placeholder="Select Flavor Color">
+  <br>
+  <button  (click)="addButtonClicked(newName.value, newPrice.value, newColor, newFontColor); " type="button" name="button" class="btn btn-primary">Add Flavor</button>
+<br><br>
+<input type="text" [(ngModel)]="searchAll" />
+<button class="clear" ngClick="searchAll = null">hello</button>
 </div>

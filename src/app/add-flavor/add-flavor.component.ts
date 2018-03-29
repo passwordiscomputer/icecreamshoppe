@@ -10,6 +10,9 @@ export class AddFlavorComponent implements OnInit {
   @Output() clickSender = new EventEmitter();
   constructor() { }
 
+  newColor = "";
+  newFontColor= "";
+
   addFlavor: boolean;
 
   clickedAdd() {
@@ -19,6 +22,8 @@ export class AddFlavorComponent implements OnInit {
     this.addFlavor = null;
     let newBucket = new Bucket(name, parseInt(price), color, fontColor);
     this.clickSender.emit(newBucket);
+    this.newColor = "";
+    this.newFontColor = "";
   }
   ngOnInit() {
   }

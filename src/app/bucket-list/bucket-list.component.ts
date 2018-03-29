@@ -8,9 +8,21 @@ import { Bucket } from '../models/bucket.model';
 })
 export class BucketListComponent implements OnInit {
   @Input() childBucketList: Bucket[];
+  @Output() addClickSender = new EventEmitter();
+  @Output() subtractClickSender = new EventEmitter();
+
+  clickAdd(bucket){
+    this.addClickSender.emit(bucket);
+  }
+
+  clickSubtract(bucket){
+    this.subtractClickSender.emit(bucket);
+  }
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

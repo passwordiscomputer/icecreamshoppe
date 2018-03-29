@@ -1,6 +1,7 @@
 #bucket-table {
   position: relative;
   display: block;
+  margin: auto 15%;
 }
 
 
@@ -8,8 +9,23 @@
   background-color: transparent;
 }
 
-#bucket-flavor, #remaining-scoops, #scoop-cost, #scoop-quantity {
-  width: 25%;
+#bucket-flavor {
+  width: 20%;
+}
+
+#remaining-scoops {
+  width: 30%;
+  text-align: left;
+}
+
+#scoop-cost {
+  width: 15%;
+  text-align: center;
+}
+
+#scoop-quantity {
+  width: 35%;
+  text-align: center;
 }
 
 #plusMinus {
@@ -17,7 +33,7 @@
 }
 
 .addSub {
-  height: 42px;
-  width: 42px;
+  height: 50px;
+  width: 50px;
   margin: auto;
 }

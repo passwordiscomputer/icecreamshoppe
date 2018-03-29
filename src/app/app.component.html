@@ -1,8 +1,10 @@
 <h1 class="display-1">Daddy's Ice Cream Shoppe</h1>
 <br><br>
 <div class="row">
-  <div class="col-md-6">
-    <app-bucket-list [childBucketList] = "masterBucketList"></app-bucket-list>
+  <div class="col-md-8">
+    <app-order-total (clickSender)="sellScoops()" [childBucketList] = "masterBucketList"></app-order-total>
+    <br>
+    <app-bucket-list (addClickSender)="addCurrentScoop($event)" (subtractClickSender)="subtractCurrentScoop($event)" [childBucketList] = "masterBucketList"></app-bucket-list>
     <br>
     <app-add-flavor (clickSender)="addFlavor($event)" ></app-add-flavor>
   </div>
@@ -10,9 +12,9 @@
 
 <hr>
 
-  <div class="col-md-6">
+  <div class="col-md-4">
 <!-- displays ice cream order form -->
-  <app-order-total (clickSender)="sellScoops()" [childBucketList] = "masterBucketList"></app-order-total>
+    <app-visual-icecream [childScoopArray] = "masterScoopArray" ></app-visual-icecream>
   </div>
 </div>
 <hr>

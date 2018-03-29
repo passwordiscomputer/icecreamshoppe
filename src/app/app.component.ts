@@ -14,14 +14,27 @@ export class AppComponent {
     new Bucket('vanilla', 2.49, 'beige')
   ];
 
+  masterScoopArray: String[] = [];
+
   sellScoops() {
     for (let bucket of this.masterBucketList) {
       bucket.currentScoops = 0;; // 1, "string", false
     }
   }
 
-  addFlavor(bucket){
+  addFlavor(bucket) {
     this.masterBucketList.push(bucket);
+  }
+
+  addCurrentScoop(bucket) {
+    bucket.addScoop();
+    this.masterScoopArray.push(bucket.color);
+    console.log(this.scoopArray);
+  }
+
+  subtractCurrentScoop(bucket) {
+    bucket.subtractScoop();
+
   }
 
 }
