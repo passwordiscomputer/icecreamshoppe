@@ -13,7 +13,7 @@
       <td id="scoop-price">${{currentBucket.scoopPrice}}</td>
       <td id="scoop-quantity">
         <div id="plusMinus">
-          <button (click)="currentBucket.subtractScoop()" type="button" class="btn" id="minus-butt">
+          <button (click)="clickSubtract(currentBucket)" type="button" class="btn" id="minus-butt">
             <img src="./assets/choc-minus.png" alt="subtract" class="addSub">
           </button>
           <button (click)="clickAdd(currentBucket)" type="button" class="btn" id="add-butt">
@@ -22,5 +22,9 @@
         </div>
       </td>
     </tr>
+    <button (click)="clickNewOrder()" type="button" class="btn bg-primary">
+      add a new order
+    </button>
+
   </table>
 </div>

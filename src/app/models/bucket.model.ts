@@ -8,8 +8,9 @@ export class Bucket {
     if (this.remainingScoops > 0) {
       this.remainingScoops -= 1;
       this.currentScoops += 1;
+      return true;
     } else {
-      alert(`Sorry, We're out of that flavor!\n\nPlease pick another one!` );
+      return false;
     }
   }
 
@@ -17,7 +18,9 @@ export class Bucket {
     if (this.currentScoops > 0) {
       this.remainingScoops += 1;
       this.currentScoops -= 1;
+      return true;
     }
+    return false;
   }
 
   totalPrice() {

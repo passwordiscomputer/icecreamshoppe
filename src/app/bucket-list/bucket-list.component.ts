@@ -10,6 +10,7 @@ export class BucketListComponent implements OnInit {
   @Input() childBucketList: Bucket[];
   @Output() addClickSender = new EventEmitter();
   @Output() subtractClickSender = new EventEmitter();
+  @Output() newOrderClickSender = new EventEmitter();
 
   clickAdd(bucket){
     this.addClickSender.emit(bucket);
@@ -17,6 +18,10 @@ export class BucketListComponent implements OnInit {
 
   clickSubtract(bucket){
     this.subtractClickSender.emit(bucket);
+  }
+
+  clickNewOrder(){
+    this.newOrderClickSender.emit();
   }
 
   constructor() { }

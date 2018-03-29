@@ -1,3 +1,13 @@
-<div class="scoop" *ngFor="let scoop of childScoopArray.reverse()">
-  <h3 [ngStyle]="{'color': scoop}" >{{scoop}}</h3>
+
+
+<div class="visualIceCreamCone">
+
+  <div *ngFor="let color of childScoopArray; let i = index" >
+    <img class="visualScoop" src="./assets/cropped-scoop.png" alt="scoop" [ngStyle]="{'background-color': color, 'z-index': childScoopArray.length - i }">
+
+  </div>
+
+  <div >
+    <img class="visualCone" src="./assets/cone.png" alt="cone" >
+  </div>
 </div>

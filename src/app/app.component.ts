@@ -13,13 +13,14 @@ export class AppComponent {
     new Bucket('strawberry', 1.99, 'pink'),
     new Bucket('vanilla', 2.49, 'beige')
   ];
-
-  masterScoopArray: String[] = [];
+  masterOrderArray: Array[] = [[]];
+  currentOrder = 0;
 
   sellScoops() {
     for (let bucket of this.masterBucketList) {
       bucket.currentScoops = 0;; // 1, "string", false
     }
+    this.masterScoopArray = [];
   }
 
   addFlavor(bucket) {
@@ -27,14 +28,23 @@ export class AppComponent {
   }
 
   addCurrentScoop(bucket) {
-    bucket.addScoop();
-    this.masterScoopArray.push(bucket.color);
-    console.log(this.scoopArray);
+    if (bucket.addScoop()) {
+      this.masterOrderArray[this.currentOrder].unshift(bucket.color);
+    }
   }
 
   subtractCurrentScoop(bucket) {
-    bucket.subtractScoop();
-
+    if(bucket.subtractScoop()){
+      this.masterOrderArray[this.currentOrder].splice( this.masterOrderArray[this.currentOrder].indexOf(bucket.color), 1 );
+    }
   }
+
+  createNewOrder(){
+    this.masterOrderArray.push([]);
+    currentOrder = this.masterOrderArray.length - 1;
+    console.log(this.masterOrderArray.length);
+  }
+
+
 
 }

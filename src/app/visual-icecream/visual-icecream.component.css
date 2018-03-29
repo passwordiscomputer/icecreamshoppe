@@ -1,0 +1,18 @@
+.visualIceCreamCone {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  clear: both;
+}
+
+.visualScoop {
+  height: 60%;
+  width: 60%;
+  position: relative;
+  margin-bottom: -10%;
+}
+
+.visualCone {
+  height: 60%;
+  width: 60%;
+}
