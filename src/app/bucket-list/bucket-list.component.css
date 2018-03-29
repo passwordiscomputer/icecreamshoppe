@@ -1,0 +1,13 @@
+td {
+  font-size: 18px;
+}
+
+.addSub {
+  height: 42px;
+  width: 42px;
+  margin: auto -15px;
+}
+
+#minus-butt, #add-butt {
+  background-color: transparent;
+}

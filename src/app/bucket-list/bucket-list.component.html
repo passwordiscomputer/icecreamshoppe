@@ -7,12 +7,14 @@
         <th># of Scoops</th>
       </tr>
       <tr [class]="currentBucket.flavor" *ngFor="let currentBucket of childBucketList">
-        <td>{{currentBucket.flavor}}</td>
-        <td>{{currentBucket.remainingScoops}}</td>
+        <td>&nbsp;{{currentBucket.flavor}}</td>
+        <td>&nbsp;{{currentBucket.remainingScoops}}</td>
         <td>{{currentBucket.scoopPrice}}</td>
         <td>
-          <button (click)="currentBucket.subtractScoop()" type="button" class="btn btn-danger"> - </button>
-          <button (click)="currentBucket.addScoop(1)"  type="button" class="btn btn-success"> + </button>
+          <div id="plusMinus">
+            <button (click)="currentBucket.subtractScoop()" type="button" class="btn" id="minus-butt"><img src="./assets/choc-minus.png" alt="subtract" class="addSub"></button>
+            <button (click)="currentBucket.addScoop(1)"  type="button" class="btn" id="add-butt"> <img src="./assets/icecream_plus.png" class="addSub" alt="add"> </button>
+          </div>
         </td>
 
       </tr>
