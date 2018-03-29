@@ -4,7 +4,7 @@
   <div class="col-md-8">
     <app-order-total (clickSender)="sellScoops()" [childBucketList] = "masterBucketList"></app-order-total>
     <br>
-    <app-bucket-list (addClickSender)="addCurrentScoop($event)" (subtractClickSender)="subtractCurrentScoop($event)" (clickNewOrder)="createNewOrder()"[childBucketList] = "masterBucketList"></app-bucket-list>
+    <app-bucket-list (addClickSender)="addCurrentScoop($event)" (subtractClickSender)="subtractCurrentScoop($event)" (newOrderClickSender)="createNewOrder()" [childBucketList] ="masterBucketList"></app-bucket-list>
     <br>
     <app-add-flavor (clickSender)="addFlavor($event)" ></app-add-flavor>
   </div>
@@ -12,9 +12,9 @@
 
 <hr>
 
-  <div class="col-md-4">
+  <div  *ngFor = "let scoopArray of masterOrderArray" class="col-md-4">
 <!-- displays ice cream order form -->
-    <app-visual-icecream *ngFor = "let scoopArray of masterOrderArray" [childScoopArray] = "scoopArray" ></app-visual-icecream>
+    <app-visual-icecream [childScoopArray] = "scoopArray" ></app-visual-icecream>
   </div>
 </div>
 <hr>

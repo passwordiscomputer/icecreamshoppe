@@ -41,7 +41,7 @@ export class AppComponent {
 
   createNewOrder(){
     this.masterOrderArray.push([]);
-    currentOrder = this.masterOrderArray.length - 1;
+    this.currentOrder = this.masterOrderArray.length - 1;
     console.log(this.masterOrderArray.length);
   }
 
