@@ -23,3 +23,4 @@ export class Bucket {
   totalPrice() {
     return (Math.round((this.currentScoops * this.scoopPrice) * 100) / 100);
   }
+}
