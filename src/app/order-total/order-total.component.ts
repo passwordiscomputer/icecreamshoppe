@@ -1,5 +1,5 @@
 import { Component, Input, Output,  OnInit } from '@angular/core';
-import { Bucket } from '../models/bucket.model'
+import { Bucket } from '../models/bucket.model';
 import { NgStyle } from '@angular/common';
 
 @Component({
@@ -10,11 +10,8 @@ import { NgStyle } from '@angular/common';
 export class OrderTotalComponent implements OnInit {
   @Input() childBucketList: Bucket[];
   constructor() { }
-  color = "#555555"
-
-
+  color = '#555555';
   ngOnInit() {
   }
-
 
 }
