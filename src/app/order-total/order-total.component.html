@@ -2,13 +2,20 @@
   <table>
       <tr>
         <th>Flavor</th>
-        <th>Remaining Scoops</th>
+        <th>Order Scoops</th>
         <th>Price per Scoop</th>
+        <th>Price</th>
       </tr>
-      <tr [class]="currentBucket.flavor" *ngFor="let currentBucket of childBucketList">
+      <tr [ngStyle]="{'background-color': currentBucket.color, 'color': currentBucket.fontColor}"  *ngFor="let currentBucket of childBucketList | inOrder ">
         <td>{{currentBucket.flavor}}</td>
-        <td>{{currentBucket.remainingScoops}}</td>
+        <td>{{currentBucket.currentScoops}}</td>
         <td>{{currentBucket.scoopPrice}}</td>
+        <td>{{currentBucket.totalPrice()}}</td>
+      </tr>
+      <tr>
+        <td>grand total</td>
+        <td>{{sumTotal(currentBucket)}}</td>
       </tr>
   </table>
+  <button (click)="clickedSell()"  type="button" class="btn btn-success"> Sell </button>
 </div>

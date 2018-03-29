@@ -10,8 +10,10 @@
         <td>{{currentBucket.flavor}}</td>
         <td>{{currentBucket.remainingScoops}}</td>
         <td>{{currentBucket.scoopPrice}}</td>
-        <td> <button type="button" class="btn btn-danger"> - </button>
-         <button type="button" class="btn btn-success"> + </button> </td>
+        <td>
+          <button (click)="currentBucket.subtractScoop()" type="button" class="btn btn-danger"> - </button>
+          <button (click)="currentBucket.addScoop(1)"  type="button" class="btn btn-success"> + </button>
+        </td>
 
       </tr>
   </table>

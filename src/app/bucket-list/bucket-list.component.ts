@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import {  Component, Input, Output, EventEmitter, OnInit  } from '@angular/core';
 import { Bucket } from '../models/bucket.model';
 
 @Component({
@@ -10,5 +10,7 @@ export class BucketListComponent implements OnInit {
   @Input() childBucketList: Bucket[];
   constructor() { }
 
+  ngOnInit(){
+  }
 
 }
