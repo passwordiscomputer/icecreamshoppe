@@ -7,7 +7,7 @@
       <th id="scoop-quantity"> # of Scoops</th>
     </tr>
 
-    <tr [class]="currentBucket.flavor" *ngFor="let currentBucket of childBucketList">
+    <tr [ngStyle]="{'background-color': currentBucket.color, 'color': currentBucket.fontColor}" *ngFor="let currentBucket of childBucketList">
       <td id="bucket-flavor">&nbsp;{{currentBucket.flavor}}</td>
       <td id="remaining-scoops">&nbsp;{{currentBucket.remainingScoops}} / 96</td>
       <td id="scoop-price">${{currentBucket.scoopPrice}}</td>

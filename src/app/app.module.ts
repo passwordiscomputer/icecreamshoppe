@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { BucketListComponent } from './bucket-list/bucket-list.component';
 import { OrderTotalComponent } from './order-total/order-total.component';
 import { inOrderPipe } from './inOrder.pipe';
+import { AddFlavorComponent } from './add-flavor/add-flavor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BucketListComponent,
     OrderTotalComponent,
-    inOrderPipe
+    inOrderPipe,
+    AddFlavorComponent
   ],
   imports: [
     BrowserModule,

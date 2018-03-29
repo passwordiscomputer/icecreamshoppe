@@ -18,7 +18,10 @@ export class AppComponent {
     for (let bucket of this.masterBucketList) {
       bucket.currentScoops = 0;; // 1, "string", false
     }
+  }
 
+  addFlavor(bucket){
+    this.masterBucketList.push(bucket);
   }
 
 }

@@ -3,6 +3,8 @@
 <div class="row">
   <div class="col-md-6">
     <app-bucket-list [childBucketList] = "masterBucketList"></app-bucket-list>
+    <br>
+    <app-add-flavor (clickSender)="addFlavor($event)" ></app-add-flavor>
   </div>
 <!-- displays remaining ice cream -->
 
