@@ -14,6 +14,7 @@ export class AppComponent {
     new Bucket('vanilla', 2.49, 'beige')
   ];
   masterOrderArray: Array[] = [[]];
+  masterScoopArray: Array[] = [[]];
   currentOrder = 0;
 
   sellScoops() {
